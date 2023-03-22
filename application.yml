@@ -3,3 +3,69 @@ eureka:
     service-url:
       defaultZone:
         http://localhost:8001/eureka
+        
+---
+spring:
+  config:
+    activate:
+      on-profile: "sentence"
+  application:
+    name: lab-4-sentence
+server:
+  port: 8002  
+words: NotApplicable
+    
+---
+spring:
+  config:
+    activate:
+      on-profile: "subject"
+  application:
+    name: lab-4-subject
+server:
+  port: 0
+words: I,You,He,She,It
+  
+---
+spring:
+  config:
+    activate:
+      on-profile: "verb"
+  application:
+    name: lab-4-verb
+server:
+  port: 0
+words: ran,knew,had,saw,bought
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "article"
+  application:
+    name: lab-4-article
+server:
+  port: 0
+words: a,the
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "adjective"
+  application:
+    name: lab-4-adjective
+server:
+  port: 0
+words: reasonable,leaky,suspicious,ordinary,unlikely
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "noun"
+  application:
+    name: lab-4-noun
+server:
+  port: 0
+words: boat,book,vote,seat,backpack,partition,groundhog
